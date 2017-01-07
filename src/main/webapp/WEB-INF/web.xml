@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+
+	<display-name>spring-mvc-controllers</display-name>
+
+
+	<!-- For Annotation Driven Controller example. -->
+	<servlet>
+		<servlet-name>annotation-driven-dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>annotation-driven-dispatcher</servlet-name>
+		<url-pattern>/annotation-driven/*</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- For Custom Controller example. -->
+	<servlet>
+		<servlet-name>custom-dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>custom-dispatcher</servlet-name>
+		<url-pattern>/custom/*</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- For MultiActionController example. -->
+	<servlet>
+		<servlet-name>multi-action-dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>multi-action-dispatcher</servlet-name>
+		<url-pattern>/multi-action/*</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- For ParameterizableViewController example. -->
+	<servlet>
+		<servlet-name>parameterizable-view-dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>parameterizable-view-dispatcher</servlet-name>
+		<url-pattern>/parameterizable-view/*</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- For ServletForwardingController example. -->
+	<servlet>
+		<servlet-name>hello-servlet</servlet-name>
+		<servlet-class>com.aviskar.sample.controller.servlet.forwarding.HelloServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>servlet-forwarding-dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>servlet-forwarding-dispatcher</servlet-name>
+		<url-pattern>/servlet-forwarding/*</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- For ServletWrappingController example. -->
+	<servlet>
+		<servlet-name>servlet-wrapping-dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>servlet-wrapping-dispatcher</servlet-name>
+		<url-pattern>/servlet-wrapping/*</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- For UrlFilenameViewController example. -->
+	<servlet>
+		<servlet-name>url-filename-view-dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>url-filename-view-dispatcher</servlet-name>
+		<url-pattern>/url-filename-view/*</url-pattern>
+	</servlet-mapping>
+</web-app>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/multi-action/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
+
+	<bean class="com.aviskar.sample.controller.multi.action.CustomerController">
+		<!-- The type of methodNameResolver determines the method to be executed. -->
+		<!-- Default methodNameResolver is InternalPathMethodNameResolver with 
+			prefix as "" & suffix as "". -->
+		<!-- There are three possible built-in candidates for methodNameResolver: -->
+		<!-- 1. InternalPathMethodNameResolver -->
+		<!-- 2. PropertiesMethodNameResolver -->
+		<!-- 3. ParameterMethodNameResolver -->
+		<!-- One of the above three can be configured explicitly. -->
+	</bean>
+</beans>
